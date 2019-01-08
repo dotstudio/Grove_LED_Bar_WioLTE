@@ -1,3 +1,36 @@
+
+## インストール
+
+* [ここ](https://github.com/dotstudio/Grove_LED_Bar_WioLTE)からzipファイルをDL
+* スケッチ -> ライブラリをインクルード -> .zip形式のライブラリをインストール
+* DLしたzipファイルを選択
+
+## 使い方
+
+サンプルコードの`#include <Grove_LED_Bar.h>`になってる箇所を`#include <Grove_LED_Bar_WioLTE.h>`に変更すると動きます。
+
+```
+#include <WioCellLibforArduino.h>
+#include <Grove_LED_Bar_WioLTE.h> //変更点
+
+Grove_LED_Bar bar(WIO_D39, WIO_D38, 0);  // Clock pin, Data pin, Orientation
+
+void setup(){
+  bar.begin();
+}
+
+void loop(){
+  for (int i = 0; i <= 10; i++){
+    bar.setLevel(i);
+    delay(100);
+  }
+}
+```
+
+このサンプルだと↓のGIFのような挙動をしてくれます。
+
+## 以下はフォーク元のREADME
+
 Grove LED Bar
 -------------------------------------------------------------
 ![image](Grove_LED_Bar.gif)
