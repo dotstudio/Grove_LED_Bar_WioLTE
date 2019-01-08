@@ -9,6 +9,8 @@
 
 サンプルコードの`#include <Grove_LED_Bar.h>`になってる箇所を`#include <Grove_LED_Bar_WioLTE.h>`に変更すると動きます。
 
+次のコードの場合、D38ポートに配線してます。
+
 ```
 #include <WioCellLibforArduino.h>
 #include <Grove_LED_Bar_WioLTE.h> //変更点
